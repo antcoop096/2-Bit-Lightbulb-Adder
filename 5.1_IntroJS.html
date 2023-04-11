@@ -1,0 +1,101 @@
+<html>
+<head>
+ <title>2-Bit Adder</title>
+</head>
+
+<body>
+<h style = "font-size: 50px;">2-Bit Binary Calculator</h>
+<p style = "font-size: 25px;">Add two two-bit binary numbers below:</p>
+
+<br>
+
+<img id="light_1" src="lightbulb_off.gif" style="width:100px">
+<button onclick="document.getElementById('light_1').src='lightbulb_on.gif'">|</button>
+<button onclick="document.getElementById('light_1').src='lightbulb_off.gif'">O</button>
+
+<img id="light_2" src="lightbulb_off.gif" style="width:100px">
+<button onclick="document.getElementById('light_2').src='lightbulb_on.gif'">|</button>
+<button onclick="document.getElementById('light_2').src='lightbulb_off.gif'">O</button>
+
+<br>
+
+<img id="light_3" src="lightbulb_off.gif" style="width:100px">
+<button onclick="document.getElementById('light_3').src='lightbulb_on.gif'">|</button>
+<button onclick="document.getElementById('light_3').src='lightbulb_off.gif'">O</button>
+
+<img id="light_4" src="lightbulb_off.gif" style="width:100px">
+<button onclick="document.getElementById('light_4').src='lightbulb_on.gif'">|</button>
+<button onclick="document.getElementById('light_4').src='lightbulb_off.gif'">O</button>
+<br>
+<p>__________________________________________</p>
+<img id="light_5" src="lightbulb_off.gif" style="width:100px"><img id="light_6" src="lightbulb_off.gif" style="width:100px"><img id="light_7" src="lightbulb_off.gif" style="width:100px"></p>
+
+
+<script>
+
+function two_bit_adder(){
+
+  document.getElementById("light_5").src = "lightbulb_off.gif";
+  document.getElementById("light_6").src = "lightbulb_off.gif";
+  document.getElementById("light_7").src = "lightbulb_off.gif";
+
+  var sum = 0;
+
+  if (document.getElementById("light_1").getAttribute("src") == "lightbulb_on.gif"){
+
+    sum += 2;
+
+    }
+
+  if (document.getElementById("light_2").getAttribute("src") == "lightbulb_on.gif"){
+
+    sum += 1;
+
+    }
+
+  if (document.getElementById("light_3").getAttribute("src") == "lightbulb_on.gif"){
+
+    sum += 2;
+
+    }
+
+  if (document.getElementById("light_4").getAttribute("src") == "lightbulb_on.gif"){
+
+    sum += 1;
+
+    }
+
+
+
+
+  if (sum >= 4){
+
+    document.getElementById("light_5").src = "lightbulb_on.gif";
+
+    }
+
+  if (sum == 2 || sum == 3 || sum == 6){
+
+    document.getElementById("light_6").src = "lightbulb_on.gif";
+
+    }
+
+  if (sum % 2 == 1){
+
+    document.getElementById("light_7").src = "lightbulb_on.gif";
+
+    }
+
+
+
+
+}
+
+
+</script>
+
+<button onclick="two_bit_adder()">Results</button>
+
+
+</body>
+</html>
